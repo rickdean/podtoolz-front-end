@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Podtoolz</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags unless you know what you are doing -->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags unless you know what you are doing -->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body class="container-fluid">
+      <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Podtoolz</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Register</a></li>
+                    <li><a href="#">Sign-In</a></li>
+                    <li><a href="#">Sign-Out</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Admin</li>
+                    <li><a href="#">Change Password</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="first-slide" src="https://s3.amazonaws.com/podtools/mixerboard.jpeg" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Podtoolz</h1>
+              <h2>Ever ask yourself what you need to start a podcast?</h2>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Create Your Wish List</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="second-slide" src="https://s3.amazonaws.com/podtools/iphone.jpeg" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Podtoolz</h1>
+              <h2>Make a wishlist.</h2>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Create Your Wish List</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="third-slide" src="https://s3.amazonaws.com/podtools/hindenburg.jpg" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Podtoolz</h1>
+              <h2>Export your list and get started!</h2>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Create Your Wish List</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="https://s3.amazonaws.com/podtools/audio-wave.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Software</h2>
+          <p>Audio editing & mixing</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="https://s3.amazonaws.com/podtools/mic.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Equipment</h2>
+          <p>Microphones, headphones, recorders, etc.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="https://s3.amazonaws.com/podtools/xlr.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Peripherals</h2>
+          <p>Cables, stands, & things you might not think about.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Why start a podcast? <span class="text-muted"></span></h2>
+          <p class="lead">If you have something you are passionate about and would like to share there is no better way than with a podcast.  It's personal, powerful, and accessible.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="https://s3.amazonaws.com/podtools/podcast.jpeg" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Is it expensive? <span class="text-muted"></span></h2>
+          <p class="lead">There has been no better time to produce a podcast.  Especially when it comes to producing a quality show without having to invest a lot of money.</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block" src="https://s3.amazonaws.com/podtools/headphone_mic.jpeg" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading" id='about'>About This Site<span class="text-muted"></span></h2>
+          <p class="lead">I've been asked many times what is needed to start a podcast.  The good news is that it's not as much as you think.  That is why I created Podtoolz.
+            I've put together a list of the equipment I use and also some very inexpensice (and sometimes free!) alternatives.  Once you've checked off the items you are interested
+            in you can print your list and start shopping!
+
+            My name is Rick and I've been producing shows since 2012. Projects include 'Evolution Talk' and, as of 2016, I've been writing, directing, and producing audio-dramas
+          such as The Behemoth, Bryar Lane, and Scotch.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="https://s3.amazonaws.com/podtools/rick_paint2.png" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2016 Rick Coste Productions, Inc. </p>
+      </footer>
+
+    </div><!-- /.container -->
+    </body>
+</html>
