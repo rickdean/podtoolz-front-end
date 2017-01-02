@@ -15,5 +15,4 @@ require('expose?$!jquery');
 require('expose?jQuery!jquery');
 
 // attach getFormFields
-
 require('expose?getFormFields!./lib/get-form-fields.js');

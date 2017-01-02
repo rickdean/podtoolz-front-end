@@ -10,6 +10,7 @@
       <!-- Do not add `script` tags unless you know what you are doing -->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
     </head>
     <body class="container-fluid">
       <div class="navbar-wrapper">
@@ -117,7 +118,7 @@
           <img class="img-circle" src="https://s3.amazonaws.com/podtools/audio-wave.jpg" alt="Generic placeholder image" width="140" height="140">
           <h2>Software</h2>
           <p>Audio editing & mixing</p>
-          <p><a class="view-software btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p><button class="view-software btn btn-default">View details &raquo;</button></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="https://s3.amazonaws.com/podtools/mic.jpg" alt="Generic placeholder image" width="140" height="140">
@@ -137,7 +138,8 @@
       </div>
 
       <!-- Opening div for software -->
-      <div class="container-software centered text-center">
+      <div class="container-software centered text-center" id="software">
+
         <!--  software -->
         <div class="row">
           <div class="col-lg-4">
@@ -202,30 +204,10 @@
           </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
 
+      </div>
 
-        <!--  software sample
-        <form class="addItemButton">
-      <div class="form-group">
-        <input type="text" name="item[name]" value="New Name">
-      </div>
-      <div class="form-group">
-        <input type="text" name="item[price]" value="$12.00">
-      </div>
-      <div class="form-group">
-        <input type="text" name="item[description]"  value="Hope this appears">
-      </div>
-      <div class="form-group">
-        <input type="text" name="item[category]" value="software">
-      </div>
-      <div class="form-group">
-        <input type="text" name="item[url]" value="http">
-      </div>
-      <button class="text" type="submit">Add to List</button>
-    </form>
-  -->
+    <div class="container-software centered text-center" id="software-template"></div>
 
-    <!-- Closing div for container software -->
-      </div>
 
 
       <!-- START THE FEATURETTES -->
@@ -288,15 +270,15 @@
               </div>
               <div class="modal-body">
                   <form class='sign-up-form'>
-                      <div class="form-group">
+                      <div class="form-group auth">
                           <label for="sign-up-email">Email address<span class="asterisk">*</span></label>
                           <input type="email" name="credentials[email]" class="form-control" id="sign-up-email" placeholder="Email" required="required">
                       </div>
-                      <div class="form-group">
+                      <div class="form-group auth">
                           <label for="sign-up-password">Password<span class="asterisk">*</span></label>
                           <input type="password" name="credentials[password]" class="form-control" id="sign-up-password" placeholder="Password" required="required">
                       </div>
-                      <div class="form-group">
+                      <div class="form-group auth">
                           <label for="sign-up-confirm-password">Confirm Password<span class="asterisk">*</span></label>
                           <input type="password" name="credentials[password_confirmation]" class="form-control" id="sign-up-confirm-password" placeholder="Confirm Password" required="required">
                       </div>
@@ -322,11 +304,11 @@
                 </div>
                 <div class="modal-body">
                     <form class='sign-in-form'>
-                        <div class="form-group">
+                        <div class="form-group auth">
                             <label for="sign-in-email">Email address<span class="asterisk">*</span></label>
                             <input type="email" name="credentials[email]" class="form-control" id="sign-in-email" placeholder="Email" required="required">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group auth">
                             <label for="sign-in-password">Password<span class="asterisk">*</span></label>
                             <input type="password" name="credentials[password]" class="form-control" id="sign-in-password" placeholder="Password" required="required">
                         </div>
@@ -352,11 +334,11 @@
               </div>
               <div class="modal-body">
                   <form class='change-password-form'>
-                      <div class="form-group">
+                      <div class="form-group auth">
                           <label for="change-password-old">Old Password<span class="asterisk">*</span></label>
                           <input type="password" name="passwords[old]" class="form-control" id="change-password-old" placeholder="Old Password" required="required">
                       </div>
-                      <div class="form-group">
+                      <div class="form-group auth">
                           <label for="change-password-new">New Password<span class="asterisk">*</span></label>
                           <input type="password" name="passwords[new]" class="form-control" id="change-password-new" placeholder="New Password" required="required">
                       </div>

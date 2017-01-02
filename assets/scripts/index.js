@@ -4,13 +4,12 @@ const authEvents = require('./auth/events.js');
 const itemEvents = require('./wishlist/events.js');
 //const softwareTemplate = require('./templates/software.handlebars');
 
-require('./example');
 
 $(()=>{
   authEvents.addHandlers();
   $(".reset, .close").click(function() {
-      $("input").val("");
+      $(".form-control").val("");
   });
   itemEvents.addHandlers();
-//  itemEvents.addHandlers();
+//$('#software-template').html(softwareTemplate());
 });

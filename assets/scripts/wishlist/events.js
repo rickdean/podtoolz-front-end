@@ -1,8 +1,18 @@
 'use strict';
 
+// const showSoftwareTemplate = require('../templates/software.handlebars');
 const getFormFields = require('../../../lib/get-form-fields');
 const api = require('./api.js');
 const ui = require('./ui.js');
+
+
+
+const onShowSoftware = function showSoftware() {
+  event.preventDefault();
+  console.log('click software button');
+// $('#software2').html(showSoftwareTemplate());
+  document.getElementById('software').style.display = "block";
+};
 
 // const onGetShows = function (data) {
 //   event.preventDefault();
@@ -24,6 +34,8 @@ const onAddItem = function (event) {
 //         //.done(ui.indexShowSuccess)
 //         //.fail(ui.failure);
   };
+
+
 //
 //   const deleteId =  function (event){
 //     event.preventDefault();
@@ -63,8 +75,10 @@ const onAddItem = function (event) {
 
 
 const addHandlers = () => {
+  $('.view-software').on('click', onShowSoftware);
   // $('#get-shows').on('click', onGetShows);
   $('.addItemButton').on('submit', onAddItem);
+
   // $('.title-display').on('click','.delete-show',deleteId);
   // $('#delete-show-button').on('click', onDeleteShow);
   // $('.title-display').on('click','.update-show',updateId);

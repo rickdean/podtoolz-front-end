@@ -1,6 +1,7 @@
 'use strict';
 
 const store = require('../store');
+// const softwareTemplate = require('../templates/software.handlebars');
 //const app = require('./app');
 
 const clear = (modal) => {
@@ -45,10 +46,11 @@ const signOutSuccess = () => {
 const signInSuccess = (data) => {
     store.user = data.user;
     success(data);
-    $('.logo').hide(500);
-    $('#addShow').show(500);
-    $('#get-shows').show(500);
+    // $('.logo').hide(500);
+    // $('#addShow').show(500);
+    // $('#get-shows').show(500);
     clearForm('.sign-in-form');
+
 
     //console.log(data);
 };
