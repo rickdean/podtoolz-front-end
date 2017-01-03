@@ -2,7 +2,7 @@
 
 const authEvents = require('./auth/events.js');
 const itemEvents = require('./wishlist/events.js');
-//const softwareTemplate = require('./templates/software.handlebars');
+const softwareTemplate = require('./templates/software.handlebars');
 
 
 $(()=>{
@@ -11,5 +11,5 @@ $(()=>{
       $(".form-control").val("");
   });
   itemEvents.addHandlers();
-//$('#software-template').html(softwareTemplate());
+$('#software-template').html(softwareTemplate());
 });
