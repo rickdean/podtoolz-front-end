@@ -161,7 +161,15 @@ input {
   width: 160px;
 }
 
-#software {
+#software-template {
+  display: none;
+}
+
+#equipment-template {
+  display: none;
+}
+
+#peripheral-template {
   display: none;
 }
 
