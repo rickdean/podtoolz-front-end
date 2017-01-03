@@ -1,6 +1,6 @@
 'use strict';
 // const store = require('../store');
-const wishListTemplate = require('../templates/list.handlebars');
+const wishListTemplate = require('../templates/item-listing.handlebars');
 
 // const clearInputField = () => {
 //   $('.input').val('');
@@ -17,9 +17,9 @@ const wishListTemplate = require('../templates/list.handlebars');
 // const showShowsTemplate = require('../templates/show-listing.handlebars');
 // //
 
-const getListSuccess = (data) => {
-  console.log('did it work?', data);
-  $('.list-body').html(wishListTemplate(data));
+const getListSuccess = (items) => {
+  console.log('did it work?', items);
+  $('.list-display').html(wishListTemplate(items));
   // $(".bigMessage").hide();'
   // $('.list-handlebars').show(500);
   // $("#addBox").hide();
