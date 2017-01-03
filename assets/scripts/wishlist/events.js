@@ -36,14 +36,6 @@ const onClose = function closeDiv() {
   document.getElementById('peripheral-template').style.display = "none";
 };
 
-// const onGetShows = function (data) {
-//   event.preventDefault();
-//   api.getShows(data)
-//     .done(ui.getShowsSuccess)
-//     .fail(ui.failure);
-// };
-//
-//
 const onAddItem = function (event) {
   let data = getFormFields(this);
   event.preventDefault();
@@ -57,6 +49,13 @@ const onAddItem = function (event) {
 //         //.fail(ui.failure);
   };
 
+  const onGetList = function (event) {
+    event.preventDefault();
+    console.log('click get list button');
+    api.getList()
+      .then(ui.getListSuccess)
+      .catch(ui.failure);
+  };
 
 //
 //   const deleteId =  function (event){
@@ -100,7 +99,7 @@ const addHandlers = () => {
   $('.view-software').on('click', onShowSoftware);
   $('.view-equipment').on('click', onShowEquipment);
   $('.view-peripheral').on('click', onShowPeripheral);
-  // $('#get-shows').on('click', onGetShows);
+  $('.get-list').on('click', onGetList);
   // $('.addItemButton').on('submit', onAddItem); //REMOVE IF EVERYTHING WORKS
   $('#software-template').on('submit', '.addItemButton', onAddItem);
   $('#software-template').on('click', '#closeButton', onClose);

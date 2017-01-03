@@ -1,0 +1,13 @@
+{{#each items as |item|}}
+  <div class="list-wrapper">
+    <p class="list-id col-xs-4">{{order._id}}</p>
+    <div class="list-items col-xs-4">
+      {{#each items as |item|}}
+      Item name: {{item.name}}<br>
+      Item price: ${{item.price}}<br>
+      Item count: {{item.url}}<br>
+
+      {{/each}}
+    </div>
+  </div>
+{{/each}}

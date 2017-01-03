@@ -4,16 +4,6 @@ const app = require('../app.js');
 const store = require('../store.js');
 
 
-// const getShows = () => {
-//   return $.ajax({
-//     url: app.host + '/shows',
-//     method: 'GET',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token,
-//     }
-//   });
-// };
-//
 const addItem = (data) =>
   //let token = app.user.token;
   $.ajax({
@@ -24,6 +14,16 @@ const addItem = (data) =>
     Authorization: 'Token token=' + store.user.token,
     },
   });
+
+  const getList = () => {
+   return $.ajax({
+    url: app.host + '/items',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token,
+    }
+  });
+};
 
 //
 // const deleteShow = (id) => {
@@ -49,8 +49,8 @@ const addItem = (data) =>
 
 
 module.exports = {
-  // getShows,
   addItem,
+  getList,
   // deleteShow,
   // updateShow,
 };

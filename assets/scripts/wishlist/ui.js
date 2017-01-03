@@ -1,5 +1,6 @@
 'use strict';
-const store = require('../store');
+// const store = require('../store');
+const wishListTemplate = require('../templates/list.handlebars');
 
 // const clearInputField = () => {
 //   $('.input').val('');
@@ -15,13 +16,16 @@ const store = require('../store');
 //
 // const showShowsTemplate = require('../templates/show-listing.handlebars');
 // //
-// const getShowsSuccess = (shows) => {
-//   $('.title-display').html(showShowsTemplate(shows));
-//   $(".bigMessage").hide();
-//   $('.title-display').show(500);
-//   $("#addBox").hide();
-//   //console.log(shows);
-// };
+
+const getListSuccess = (data) => {
+  console.log('did it work?', data);
+  $('.modal-content').html(wishListTemplate(data));
+  // $(".bigMessage").hide();'
+  // $('.list-handlebars').show(500);
+  // $("#addBox").hide();
+  //console.log(shows);
+};
+
 //
 //
 const addItemSuccess = (data) => {
@@ -55,7 +59,7 @@ module.exports = {
   // success,
   // failure,
   // deleteShowsSuccess,
-  // getShowsSuccess,
+  getListSuccess,
   addItemSuccess,
   addItemFail,
   // updateShowSuccess,

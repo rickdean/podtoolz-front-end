@@ -133,6 +133,7 @@
           <p><button class="view-peripheral btn btn-default">View details &raquo;</button></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
+      <button type="button" class="btn btn-primary btn-lg btn-block get-list" data-toggle="modal" data-target="#list-modal">View Your Wish List</button>
 
       <!-- closing div for main -->
       </div>
@@ -144,6 +145,22 @@
     <div class="container-equipment centered text-center" id="equipment-template"></div>
     <div class="container-peripheral centered text-center" id="peripheral-template"></div>
 
+    <!-- Opening div for list modal -->
+    <div id="list-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Your Wishlist</h4>
+      </div>
+      <div class="modal-body">
+        <div id="list-body" class="list-handlebars">
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+      <!-- End of List Modal -->
 
       <!-- START THE FEATURETTES -->
 
