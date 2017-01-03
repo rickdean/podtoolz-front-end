@@ -19,7 +19,7 @@ const wishListTemplate = require('../templates/list.handlebars');
 
 const getListSuccess = (data) => {
   console.log('did it work?', data);
-  $('.modal-content').html(wishListTemplate(data));
+  $('.list-body').html(wishListTemplate(data));
   // $(".bigMessage").hide();'
   // $('.list-handlebars').show(500);
   // $("#addBox").hide();
