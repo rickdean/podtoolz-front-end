@@ -3,7 +3,7 @@
 
 <p class="notepad">
 
-  <table class="table table-reflow listTable">
+  <table class="table table-reflow listTable" data-id={{id}}>
       <tbody>
           <tr>
             <th>Category</th>
@@ -23,6 +23,7 @@
               </tr>
       </tbody>
   </table>
+  <button type="button" data-id={{id}} class="btn btn-danger btn-sm delete-list-item">Delete</button>
 </p>
 
 {{/each}}

@@ -25,16 +25,16 @@ const addItem = (data) =>
   });
 };
 
-//
-// const deleteShow = (id) => {
-//   return $.ajax({
-//     url: app.host + '/shows/' + id,
-//     method: 'DELETE',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token,
-//     }
-//   });
-// };
+const deleteItem = (id) =>
+  // console.log(store.user);
+    $.ajax ({
+    url: app.host + '/items/' + id,
+    method: 'DELETE',
+    headers: {
+    Authorization: 'Token token=' + store.user.token,
+    }
+  });
+
 //
 // const updateShow = (data, id) => {
 //   return $.ajax({
@@ -51,6 +51,6 @@ const addItem = (data) =>
 module.exports = {
   addItem,
   getList,
-  // deleteShow,
+  deleteItem,
   // updateShow,
 };

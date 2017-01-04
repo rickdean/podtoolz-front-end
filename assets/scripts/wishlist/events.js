@@ -49,11 +49,25 @@ const onAddItem = function (event) {
 //         //.fail(ui.failure);
   };
 
+  const onDeleteItem = function(){
+    let id = event.target.getAttribute('data-id');
+    console.log('DELETED', id);
+    api.deleteItem(id)
+      .then(ui.deleteItemSuccess)
+      .then(function(){
+        onGetList();
+      })
+      .catch(ui.deleteItemFailure);
+  };
+
   const onGetList = function (event) {
-    event.preventDefault();
+    // event.preventDefault();
     console.log('click get list button');
     api.getList()
       .then(ui.getListSuccess)
+      .then(function(){
+        $('.delete-list-item').on('click', onDeleteItem);
+      })
       .catch(ui.failure);
   };
 
@@ -75,7 +89,7 @@ const onAddItem = function (event) {
 //     //   .done(ui.getShowsSuccess)
 //     //   .fail(ui.failure);
 //   };
-//
+
 //   const updateId =  function (event){
 //   event.preventDefault();
 //   let id = $(event.target).attr("data-show-id");
@@ -107,6 +121,7 @@ const addHandlers = () => {
   $('#equipment-template').on('click', '#closeButton', onClose);
   $('#peripheral-template').on('submit', '.addItemButton', onAddItem);
   $('#peripheral-template').on('click', '#closeButton', onClose);
+  // $('.delete-list-item').on('click', onDeleteItem);
   // $('.title-display').on('click','.delete-show',deleteId);
   // $('#delete-show-button').on('click', onDeleteShow);
   // $('.title-display').on('click','.update-show',updateId);

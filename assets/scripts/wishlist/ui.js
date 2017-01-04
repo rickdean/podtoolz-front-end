@@ -52,15 +52,25 @@ const addItemFail = () => {
 //
 // const deleteShowsSuccess = (shows) => {
 // $('.title-display').hide(500);
+
+const deleteItemSuccess = function(data) {
+  console.log('deleted', data);
+};
+
+const deleteItemFailure = function(error) {
+  console.log('FAIL!, this is the delete error', error);
+};
 //
 // };
 
 module.exports = {
   // success,
   // failure,
-  // deleteShowsSuccess,
+  //deleteShowsSuccess,
   getListSuccess,
   addItemSuccess,
   addItemFail,
+  deleteItemSuccess,
+  deleteItemFailure,
   // updateShowSuccess,
 };
