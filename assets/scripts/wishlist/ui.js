@@ -1,6 +1,6 @@
 'use strict';
 // const store = require('../store');
-const wishListTemplate = require('../templates/item-listing.handlebars');
+const wishListTemplate = require('../templates/list.handlebars');
 
 // const clearInputField = () => {
 //   $('.input').val('');

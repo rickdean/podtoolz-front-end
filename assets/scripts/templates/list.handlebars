@@ -1,13 +1,28 @@
+<h2> Wishlist </h2>
 {{#each items as |item|}}
-  <div class="list-wrapper">
-    <p class="list-id col-xs-4">{{order._id}}</p>
-    <div class="list-items col-xs-4">
-      {{#each items as |item|}}
-      Item name: {{item.name}}<br>
-      Item price: ${{item.price}}<br>
-      Item count: {{item.url}}<br>
 
-      {{/each}}
-    </div>
-  </div>
+<p class="notepad">
+
+  <table class="table table-reflow listTable">
+      <tbody>
+          <tr>
+            <th>Category</th>
+              <td class='row'>{{category}}</td>
+          </tr>
+          <tr>
+            <th>Name</th>
+              <td class='row'>{{name}}</td>
+              </tr>
+          <tr>
+            <th>Price</th>
+              <td class='row'>{{price}}</td>
+              </tr>
+          <tr>
+            <th>Url</th>
+              <td class='row'>{{url}}</td>
+              </tr>
+      </tbody>
+  </table>
+</p>
+
 {{/each}}
