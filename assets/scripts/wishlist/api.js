@@ -49,7 +49,7 @@ const deleteItem = (id) =>
 
 const updateItem = (data, id) => {
       return $.ajax ({
-      url: app.host + '/items/' + $('.item-comment').data('id'),
+      url: app.host + '/items/' + id,
       method: 'PATCH',
       headers: {
         Authorization: 'Token token=' + store.user.token,

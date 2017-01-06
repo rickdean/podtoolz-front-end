@@ -54,8 +54,8 @@ const onAddItem = function (event) {
   const onUpdateItem = function(event){
     event.preventDefault();
     let id = event.target.getAttribute('data-id');
-    let data = getFormFields(event.target);
-    console.log('item updated !!!', id, data);
+    let data = {description: $(this).val('tell'),};
+    console.log('item updated !!!', data, id);
     api.updateItem(id, data)
     .then(ui.updateItemSuccess)
     .then(function(){
