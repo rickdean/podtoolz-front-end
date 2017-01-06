@@ -36,6 +36,8 @@ const onClose = function closeDiv() {
   document.getElementById('peripheral-template').style.display = "none";
 };
 
+
+
 const onAddItem = function (event) {
   let data = getFormFields(this);
   event.preventDefault();
@@ -47,6 +49,19 @@ const onAddItem = function (event) {
 //       //api.indexShows()
 //         //.done(ui.indexShowSuccess)
 //         //.fail(ui.failure);
+  };
+
+  const onUpdateItem = function(event){
+    event.preventDefault();
+    let id = event.target.getAttribute('data-id');
+    let data = getFormFields(event.target);
+    console.log('item updated !!!', id, data);
+    api.updateItem(id, data)
+    .then(ui.updateItemSuccess)
+    .then(function(){
+      onGetList();
+    })
+    .catch(ui.updateItemFailure);
   };
 
   const onDeleteItem = function(){
@@ -61,34 +76,19 @@ const onAddItem = function (event) {
   };
 
   const onGetList = function (event) {
-    // event.preventDefault();
+    //event.preventDefault();
     console.log('click get list button');
     api.getList()
       .then(ui.getListSuccess)
       .then(function(){
         $('.delete-list-item').on('click', onDeleteItem);
       })
+      .then(function() {
+        $('.update').on('click', onUpdateItem);
+      })
       .catch(ui.failure);
   };
 
-//
-//   const deleteId =  function (event){
-//     event.preventDefault();
-//     let id = $(event.target).attr("data-show-id");
-//     $(".delete-show-button").attr("data-show-id", id);
-//
-//   };
-//
-//   const onDeleteShow = function (event) {
-//     event.preventDefault();
-//     let id = $(this).attr("data-show-id");
-//     api.deleteShow(id)
-//       .done(ui.deleteShowsSuccess)
-//       .fail(ui.failure);
-//     // api.getShows()
-//     //   .done(ui.getShowsSuccess)
-//     //   .fail(ui.failure);
-//   };
 
 //   const updateId =  function (event){
 //   event.preventDefault();
@@ -114,7 +114,6 @@ const addHandlers = () => {
   $('.view-equipment').on('click', onShowEquipment);
   $('.view-peripheral').on('click', onShowPeripheral);
   $('.get-list').on('click', onGetList);
-  // $('.addItemButton').on('submit', onAddItem); //REMOVE IF EVERYTHING WORKS
   $('#software-template').on('submit', '.addItemButton', onAddItem);
   $('#software-template').on('click', '#closeButton', onClose);
   $('#equipment-template').on('submit', '.addItemButton', onAddItem);

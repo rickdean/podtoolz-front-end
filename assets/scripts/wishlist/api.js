@@ -47,10 +47,21 @@ const deleteItem = (id) =>
 //   });
 // };
 
+const updateItem = (data, id) => {
+      return $.ajax ({
+      url: app.host + '/items/' + $('.item-comment').data('id'),
+      method: 'PATCH',
+      headers: {
+        Authorization: 'Token token=' + store.user.token,
+      },
+      data,
+    });
+  };
+
 
 module.exports = {
   addItem,
   getList,
   deleteItem,
-  // updateShow,
+  updateItem,
 };

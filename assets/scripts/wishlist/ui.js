@@ -53,6 +53,14 @@ const addItemFail = () => {
 // const deleteShowsSuccess = (shows) => {
 // $('.title-display').hide(500);
 
+const updateItemSuccess = function(data) {
+  console.log('Item  updated successfully.', data);
+};
+
+const updateItemFailure = function(error) {
+  console.log('No update', error);
+};
+
 const deleteItemSuccess = function(data) {
   console.log('deleted', data);
 };
@@ -64,13 +72,11 @@ const deleteItemFailure = function(error) {
 // };
 
 module.exports = {
-  // success,
-  // failure,
-  //deleteShowsSuccess,
   getListSuccess,
   addItemSuccess,
   addItemFail,
   deleteItemSuccess,
   deleteItemFailure,
-  // updateShowSuccess,
+  updateItemSuccess,
+  updateItemFailure
 };
