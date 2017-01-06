@@ -51,18 +51,36 @@ const onAddItem = function (event) {
 //         //.fail(ui.failure);
   };
 
-  const onUpdateItem = function(event){
-    event.preventDefault();
-    let id = event.target.getAttribute('data-id');
-    let data = {description: $(this).val('tell'),};
-    console.log('item updated !!!', data, id);
-    api.updateItem(id, data)
-    .then(ui.updateItemSuccess)
-    .then(function(){
-      onGetList();
-    })
-    .catch(ui.updateItemFailure);
-  };
+  // const onUpdateItem = function(event){
+  //   event.preventDefault();
+  //   let id = event.target.getAttribute('data-id');
+  //   let data = {description: $(this).val('tell'),};
+  //   console.log('item updated !!!', data, id);
+  //   api.updateItem(id, data)
+  //   .then(ui.updateItemSuccess)
+  //   .then(function(){
+  //     onGetList();
+  //   })
+  //   .catch(ui.updateItemFailure);
+  // };
+
+  const updateId =  function (event){
+event.preventDefault();
+let id = $(event.target).attr("data-id");
+$(".comment").attr("data-id", id);
+};
+
+const onUpdateItem = function (event) {
+event.preventDefault();
+let id = $(".comment").attr("data-id");
+let data = getFormFields(event.target);
+api.updateItem(data, id)
+  .done( function(){
+    ui.updateItemSuccess();
+    onGetList(event);
+  })
+  .fail(ui.failure);
+};
 
   const onDeleteItem = function(){
     let id = event.target.getAttribute('data-id');
@@ -137,8 +155,8 @@ const addHandlers = () => {
   // $('#updateEpModal').on('submit', onUpdateShow);
   // $('.title-display').on('click','.update-date',updateId);
   // $('#updateDateModal').on('submit', onUpdateShow);
-  // $('.title-display').on('click','.update-desc',updateId);
-  // $('#updateDescModal').on('submit', onUpdateShow);
+  $('.comment').on('click',updateId);
+  $('#addCommentModal').on('submit', onUpdateItem);
 };
 
 

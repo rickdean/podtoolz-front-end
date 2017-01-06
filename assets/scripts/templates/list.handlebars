@@ -1,8 +1,6 @@
 <h2> Wishlist </h2>
 {{#each items as |item|}}
 
-<form class="notepad">
-
   <table class="table table-reflow listTable" data-id={{id}}>
       <tbody>
           <tr>
@@ -25,12 +23,13 @@
               <!-- temporary ? -->
           <tr>
             <th>Comments</th>
-              <td class='row'><input type="text" class="item-comment" name="item[description]" value="enter comments here...">
-              <button type="button" data-id={{id}} class="btn btn-link update">Update</button></td>
+            <!--  <td class='row'><input type="text" class="item-comment" name="item[description]" placeholder="enter comments here..."> -->
+            <td class='row'>{{comment}}<button data-id={{id}} class="btn btn-link comment" data-toggle="modal"
+              data-target="#addCommentModal">Add Comment</button></td>
+
               </tr>
       </tbody>
   </table>
   <button type="button" data-id={{id}} class="btn btn-danger btn-sm delete-list-item">Delete</button>
-</form>
 
 {{/each}}
