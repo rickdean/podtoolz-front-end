@@ -26,7 +26,6 @@ const addItem = (data) =>
 };
 
 const deleteItem = (id) =>
-  // console.log(store.user);
     $.ajax ({
     url: app.host + '/items/' + id,
     method: 'DELETE',
@@ -35,17 +34,6 @@ const deleteItem = (id) =>
     }
   });
 
-//
-// const updateShow = (data, id) => {
-//   return $.ajax({
-//     url: app.host + '/shows/' + id,
-//     method: 'PATCH',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token,
-//     },
-//     data,
-//   });
-// };
 
 const updateItem = (data, id) => {
       return $.ajax ({

@@ -25,7 +25,6 @@ const signUpSuccess = () => {
 };
 
 const success = () => {
-    console.log();
     $('.messages').text('Success');
     clear('#signUp');
     clear('#changePass');
@@ -34,25 +33,20 @@ const success = () => {
 const signOutSuccess = () => {
     $('.messages').text("You Are Signed Out.");
     clear('#sign-out-modal');
-    $('.logo').show(500);
-    $('#addShow').hide(500);
-    $('#get-shows').hide(500);
+    // $('.logo').show(500);
     $('.title-display').hide();
     $('#addBox').hide();
     $(".bigMessage").hide();
     clear('#signOut');
+    $(".modal").on("hidden.bs.modal", function(){
+    $(".listTable").html("");
+});
 };
 
 const signInSuccess = (data) => {
     store.user = data.user;
     success(data);
-    // $('.logo').hide(500);
-    // $('#addShow').show(500);
-    // $('#get-shows').show(500);
     clearForm('.sign-in-form');
-
-
-    //console.log(data);
 };
 
 const passSuccess = (data) => {
