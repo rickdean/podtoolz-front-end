@@ -4,10 +4,6 @@ const getFormFields = require('../../../lib/get-form-fields');
 const api = require('./api.js');
 const ui = require('./ui.js');
 
-// const saveAs = require('expose?$!file-saver');
-
-
-
 const onShowSoftware = function showSoftware() {
   event.preventDefault();
   // console.log('click software button');
@@ -80,14 +76,6 @@ api.updateItem(data, id)
       .catch(ui.deleteItemFailure);
   };
 
-//   const onSave =  function (){
-//     console.log('save click');
-//   let text = $(".listTable").val();
-//   let filename = $("#input-fileName").val();
-//   let blob = new Blob([text], {type: "text/plain;charset=utf-8"});
-//   saveAs(blob, filename+".txt");
-// };
-
   const onGetList = function (event) {
     //event.preventDefault();
     // console.log('click get list button');
@@ -99,9 +87,6 @@ api.updateItem(data, id)
       .then(function() {
         $('.update').on('click', onUpdateItem);
       })
-      // .then(function() {
-      //   $('#btn-save').on('click', onSave);
-      // })
       .catch(ui.failure);
   };
 
