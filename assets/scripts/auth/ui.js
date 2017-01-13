@@ -30,8 +30,20 @@ const success = () => {
     clear('#changePass');
 };
 
+const signInSuccess = (data) => {
+    store.user = data.user;
+    success(data);
+    // clearForm('.sign-in-form');
+    $('.modal-success').text("Congrats. You may begin adding to your list :)");
+    clear('#sign-in-modal');
+    $(document).ready(function() {
+    $('.adder').show();
+    $('.get-list').show();
+    });
+};
+
 const signOutSuccess = () => {
-    $('.messages').text("You Are Signed Out.");
+    $('.modal-success').text("You Are Signed Out.");
     clear('#sign-out-modal');
     // $('.logo').show(500);
     $('.title-display').hide();
@@ -39,14 +51,11 @@ const signOutSuccess = () => {
     $(".bigMessage").hide();
     clear('#signOut');
     $(".modal").on("hidden.bs.modal", function(){
+    $('.adder').hide();
+    $('.get-list').hide();
+
     $(".listTable").html("");
 });
-};
-
-const signInSuccess = (data) => {
-    store.user = data.user;
-    success(data);
-    clearForm('.sign-in-form');
 };
 
 const passSuccess = (data) => {
@@ -55,8 +64,7 @@ const passSuccess = (data) => {
 };
 
 const failure = (error) => {
-    $('.messages').text('Failed. Please retry your email and password.');
-    clear('#signIn');
+    $('.modal-success').text('Oops - something went wrong. Please register or try to sign-in again.');
 };
 
 
