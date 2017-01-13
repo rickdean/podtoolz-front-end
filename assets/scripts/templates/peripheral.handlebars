@@ -1,65 +1,285 @@
-<div class="row">
-  <div class="col-lg-4">
-    <form class="addItemButton">
-  <div class="form-group">
-    <input type="text" class="title-font" name="item[name]" value="New Name" readonly>
+<div class="container-fluid peripheral-cont">
+  <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="closeButton">X</button>
+  <div class="divTable">
+    <div class="divTableBody">
+      <div class="divTableRow">
+        <div class="divTableCell" id="stand-trans">
+          <form class="addItemButton">
+            <div class="form-group">
+              <input type="text" class="title-font" name="item[name]" value="Mic Stand" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" class="price-font" name="item[price]" value="$18.00 +" readonly>
+            </div>
+            <div class="form-group">
+              <input type="hidden" class="url-font" name="item[url]" value="http://www.guitarcenter.com/Microphone-Stands.gc" readonly>
+            </div>
+            <div class="form-group">
+              <input type="hidden" name="item[category]" value="Peripheral" readonly>
+            </div>
+            <button type="button" class="btn btn-link info-font" data-toggle="modal" data-target="#stand-modal">More Information</button>
+            <br>
+            <button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-plus"></span>Add to List</button>
+          </form>
+        </div>
+        <div class="divTableCell" id="filter-trans">
+          <form class="addItemButton">
+            <div class="form-group">
+              <input type="text" class="title-font" name="item[name]" value="Pop Filter" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" class="price-font" name="item[price]" value="$9.99 +" readonly>
+            </div>
+            <div class="form-group">
+              <input type="hidden" name="item[category]" value="Peripheral" readonly>
+            </div>
+            <div class="form-group">
+              <input type="hidden" class="url-font" name="item[url]" value="http://www.guitarcenter.com/Pop-Filters.gc" readonly>
+            </div>
+            <button type="button" class="btn btn-link info-font" data-toggle="modal" data-target="#filter-modal">More Information</button>
+            <br>
+            <button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-plus"></span>Add to List</button>
+          </form>
+        </div>
+        <div class="divTableCell" id="ipad-trans">
+          <form class="addItemButton">
+            <div class="form-group">
+              <input type="text" class="title-font" name="item[name]" value="iPad Stand" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" class="price-font" name="item[price]" value="$29.99 +" readonly>
+            </div>
+            <div class="form-group">
+              <input type="hidden" name="item[category]" value="Peripheral" readonly>
+            </div>
+            <div class="form-group">
+              <input type="hidden" class="url-font" name="item[url]" value="http://www.guitarcenter.com/search?Ns=r&Ntt=ipad+stand" readonly>
+            </div>
+            <button type="button" class="btn btn-link info-font" data-toggle="modal" data-target="#ipad-modal">More Information</button>
+            <br>
+            <button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-plus"></span>Add to List</button>
+          </form>
+        </div>
+        <div class="divTableCell" id="cables-trans">
+          <form class="addItemButton">
+            <div class="form-group">
+              <input type="text" class="title-font" name="item[name]" value="Cables" readonly>
+            </div>
+            <div class="form-group">
+              <input type="text" class="price-font" name="item[price]" value="$5.00 +" readonly>
+            </div>
+            <div class="form-group">
+              <input type="hidden" name="item[category]" value="Peripherals" readonly>
+            </div>
+            <div class="form-group">
+              <input type="hidden" class="url-font" name="item[url]" value="https://www.music-group.com/Categories/Behringer/Signal-Processors/Compressors-Limiters/MDX4600/p/P0179" readonly>
+            </div>
+            <button type="button" class="btn btn-link info-font" data-toggle="modal" data-target="#cables-modal">More Information</button>
+            <br>
+            <button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-plus"></span>Add to List</button>
+          </form>
+        </div>
+      </div>
+      <div class="divTableRow">
+        <div class="divTableCell">&nbsp;</div>
+        <div class="divTableCell">&nbsp;</div>
+        <div class="divTableCell">&nbsp;</div>
+        <div class="divTableCell">&nbsp;</div>
+      </div>
+    </div>
   </div>
-  <div class="form-group">
-    <input type="text" name="item[price]" value="$12.00" readonly>
-  </div>
-  <div class="form-group">
-    <input type="text" name="item[description]"  value="Hope this appears" readonly>
-  </div>
-  <div class="form-group">
-    <input type="text" name="item[category]" value="peripheral" readonly>
-  </div>
-  <div class="form-group">
-    <input type="text" name="item[url]" value="http" readonly>
-  </div>
-  <button class="text" type="submit">Add to List</button>
-  </form>
-  </div><!-- /.col-lg-4 -->
-  <div class="col-lg-4">
-    <form class="addItemButton">
-  <div class="form-group">
-    <input type="text" class="title-font" name="item[name]" value="New Name" readonly>
-  </div>
-  <div class="form-group">
-    <input type="text" name="item[price]" value="$12.00" readonly>
-  </div>
-  <div class="form-group">
-    <input type="text" name="item[description]"  value="Hope this appears" readonly>
-  </div>
-  <div class="form-group">
-    <input type="text" name="item[category]" value="peripheral" readonly>
-  </div>
-  <div class="form-group">
-    <input type="text" name="item[url]" value="http" readonly>
-  </div>
-  <button class="text" type="submit">Add to List</button>
-  </form>
-  </div><!-- /.col-lg-4 -->
-  <div class="col-lg-4">
-    <form class="addItemButton">
-  <div class="form-group">
-    <input type="text" class="title-font" name="item[name]" value="New Name" readonly>
-  </div>
-  <div class="form-group">
-    <input type="text" name="item[price]" value="$12.00" readonly>
-  </div>
-  <div class="form-group">
-    <input type="text" name="item[description]"  value="Hope this appears" readonly>
-  </div>
-  <div class="form-group">
-    <input type="text" name="item[category]" value="peripheral" readonly>
-  </div>
-  <div class="form-group">
-    <input type="text" name="item[url]" value="http" readonly>
-  </div>
-  <button class="text" type="submit">Add to List</button>
-  </form>
-  </div><!-- /.col-lg-4 -->
+  <!-- DivTable.com -->
+  <!-- /.row -->
+</div>
 
-  <button type="button" class="btn btn-danger btn-lg close" id="closeButton">Close</button>
+<!--  MXL V900 -->
+<div class="modal fade" id="stand-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              <h4 class="modal-title">MXL V900</h4>
+            </div>
+            <div class="modal-body">
+              <div class="pos section">
+  <div class="vis pos-2 size cont">
+  <div class="vis pos-3 size-2 colwrapper">
+  <div class="vis pos-3 size-3 cont">
+  <picture class="img-2">
+  <source srcset="https://s3.amazonaws.com/podtools/mxl.jpg">
+  <img src="https://s3.amazonaws.com/podtools/mxl.jpg" alt="" class="js img-logo">
+  </picture>
+  </div>
+  <div class="vis pos-4 size-4 cont">
+  <div class="cont"><p class="link-font"><a target="_blank" href="http://www.mxlmics.com/">http://www.mxlmics.com/</a></p></div>
+  </div>
+  <div class="vis pos-5 size-5 cont">
+  <div class="vis pos-6 size-6 cont-2">
+  <div class="cont"><p class="rick-font">Rick's Pick</p></div>
+  </div>
+  <div class="vis pos-7 size-7 cont-3">
+  <picture class="img-4">
+  <source srcset="https://s3.amazonaws.com/podtools/ok-512.png">
+  <img src="https://s3.amazonaws.com/podtools/ok-512.png" alt="" class="js-2 img-checkmark">
+  </picture>
+  </div>
+    <br>
+  <div class="vis pos-8 size-6 cont-4">
+  </div>
+  </div>
+  </div>
+  <div class="vis pos-9 size-8 cont">
+  <div class="cont"><p class="para">
+    This is my mic.  The MXL-V900.  Did I need one so big?  No.  But it looks cool doesn’t it?  It’s looks exactly like one you would find in al old time radio studio. I bought it after it was recommended to me by podcaster Micah Hanks.  It’s a condenser mic which means it picks up almost everything, and that can be a good thing.  This mic looks amazing on my desk next to my iMac and sometimes beauty is everything (plus it sounds great!). Last price I saw was around <span style="color:red">$199.00</span>.
+  </p></div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default reset" data-dismiss="modal">Close</button>
+    <p>&copy; 2017 Rick Coste Productions, Inc. </p>
+  </div>
+  </div>
+  </div>
+  </div>
+            </div>
+          </div>
+        </div>
+        </div>
 
-</div><!-- /.row -->
+        <!--  Shure -->
+        <div class="modal fade" id="filter-modal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                      <h4 class="modal-title">Shure SM57</h4>
+                    </div>
+                    <div class="modal-body">
+                      <div class="pos section">
+          <div class="vis pos-2 size cont">
+          <div class="vis pos-3 size-2 colwrapper">
+          <div class="vis pos-3 size-3 cont">
+          <picture class="img-2">
+          <source srcset="https://s3.amazonaws.com/podtools/shure.jpg">
+          <img src="https://s3.amazonaws.com/podtools/shure.jpg" alt="" class="js img-logo">
+          </picture>
+          </div>
+          <div class="vis pos-4 size-4 cont">
+          <div class="cont"><p class="link-font"><a target="_blank" href="http://www.shure.com/americas/products/microphones/sm/sm57-instrument-microphone">http://www.shure.com/americas/products/microphones/sm/sm57-instrument-microphone</a></p></div>
+          </div>
+          <div class="vis pos-5 size-5 cont">
+          <div class="vis pos-6 size-6 cont-2">
+          </div>
+            <br>
+          <div class="vis pos-8 size-6 cont-4">
+          </div>
+          </div>
+          </div>
+          <div class="vis pos-9 size-8 cont">
+          <div class="cont"><p class="para">
+            When I was heavily into music production (alone in my basement with a four track recorder, drum kit, and a bunch of guitars) I bought a Shure SM57 to mic my bass drum.  It then turned into my go to mic for recording my acoustic guitar.  Today, twenty years later, I still have that mic and I use it for quick audio drops.  It’s been used to record narration and I’ve recorded entire podcast episodes using it.  The SM57 is a classic for a reason.  Walk into any music store and you will be able to find new and used ones.  New ones start around <span style="color:red">$99.00</span>.  For a mic that will last for decades it’s a great deal.
+
+          </p></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default reset" data-dismiss="modal">Close</button>
+            <p>&copy; 2017 Rick Coste Productions, Inc. </p>
+          </div>
+          </div>
+          </div>
+          </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+
+
+        <!--  Mixer -->
+        <div class="modal fade" id="ipad-modal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                      <h4 class="modal-title">Mixer</h4>
+                    </div>
+                    <div class="modal-body">
+                      <div class="pos section">
+          <div class="vis pos-2 size cont">
+          <div class="vis pos-3 size-2 colwrapper">
+          <div class="vis pos-3 size-3 cont">
+          <picture class="img-2">
+          <source srcset="https://s3.amazonaws.com/podtools/audacity-logo.png">
+          <img src="https://s3.amazonaws.com/podtools/audacity-logo.png" alt="" class="js img-logo">
+          </picture>
+          </div>
+          <div class="vis pos-4 size-4 cont">
+          <div class="cont"><p class="link-font"><a target="_blank" href="http://www.audacityteam.org/">http://www.audacityteam.org/</a></p></div>
+          </div>
+          <div class="vis pos-5 size-5 cont">
+          <div class="vis pos-6 size-6 cont-2">
+          </div>
+            <br>
+          <div class="vis pos-8 size-6 cont-4">
+          </div>
+          </div>
+          </div>
+          <div class="vis pos-9 size-8 cont">
+          <div class="cont"><p class="para">
+            You don’t need a mixer to podcast, but if you do decide to get one then I would recommend picking up a XXXX.  I’ve used a few mixers in my time and this one is easy, dependable, and has an ‘effects send’ patch (which I really wanted).  I highly recommend it.  The one I grabbed off of the shelf was new at <span style="color:red">XXX</span> but you can find used ones on eBay.
+          </p></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default reset" data-dismiss="modal">Close</button>
+            <p>&copy; 2017 Rick Coste Productions, Inc. </p>
+          </div>
+          </div>
+          </div>
+          </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+
+                <!--  Compressor -->
+                <div class="modal fade" id="cables-modal">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                              <h4 class="modal-title">MDX4600</h4>
+                            </div>
+                            <div class="modal-body">
+                              <div class="pos section">
+                  <div class="vis pos-2 size cont">
+                  <div class="vis pos-3 size-2 colwrapper">
+                  <div class="vis pos-3 size-3 cont">
+                  <picture class="img-2">
+                  <source srcset="https://s3.amazonaws.com/podtools/mdx4600.jpg">
+                  <img src="https://s3.amazonaws.com/podtools/mdx4600.jpg" alt="" class="js img-logo">
+                  </picture>
+                  </div>
+                  <div class="vis pos-4 size-4 cont">
+                  <div class="cont"><p class="link-font"><a target="_blank" href="https://www.music-group.com/Categories/Behringer/Signal-Processors/Compressors-Limiters/MDX4600/p/P0179">https://www.music-group.com/Categories/Behringer/Signal-Processors/Compressors-Limiters/MDX4600/p/P0179</a></p></div>
+                  </div>
+                  <div class="vis pos-5 size-5 cont">
+                  <div class="vis pos-6 size-6 cont-2">
+                  </div>
+                  <div class="cont"><p class="rick-font">Rick's Pick</p></div>
+                  </div>
+                    <br>
+                  <div class="vis pos-8 size-6 cont-4">
+                  </div>
+                  </div>
+                  </div>
+                  <div class="vis pos-9 size-8 cont">
+                  <div class="cont"><p class="para">
+                    Do you need this?  No.  Do you want this?  Maybe.  When I started podcasting I listened to Cliff Ravenscraft who hosts a show called The Podcast Answerman.  Cliff has the Behringer MDX4600 firmly situated in his production loop and so I wanted one too. I found a used on on eBay.  A new one will set you back around <span style="color:red">$149.99</span>.  One word of caution - it’s not an easy device to master without some instruction.  If you do pick one up feel free to hit me up on what my settings are (again thanks to Cliff).  I’ll be happy to help!
+
+
+                  </p></div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default reset" data-dismiss="modal">Close</button>
+                    <p>&copy; 2017 Rick Coste Productions, Inc. </p>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                            </div>
+                          </div>
+                        </div>

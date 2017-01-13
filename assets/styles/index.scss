@@ -160,10 +160,12 @@ input {
 
 #equipment-template {
   display: none;
+  background-color: rgba(255, 235, 205, 0.41);
 }
 
 #peripheral-template {
   display: none;
+  background-color: rgba(64, 224, 208, 0.16);
 }
 
 .pick {
@@ -259,7 +261,30 @@ input {
     width:xxpx;;
 }
 
+#mxl-trans {
+  background-image: url('https://s3.amazonaws.com/podtools/mxl_t.png');
+    width:xxpx;;
+}
 
+#shure-trans {
+  background-image: url('https://s3.amazonaws.com/podtools/sm57_t.png');
+    width:xxpx;;
+}
+
+#mixer-trans {
+  background-image: url('https://s3.amazonaws.com/podtools/sm57_t.png');
+    width:xxpx;;
+}
+
+#mdx-trans {
+  background-image: url('https://s3.amazonaws.com/podtools/mdx_t.png');
+    width:xxpx;;
+}
+
+#tascam-trans {
+  background-image: url('https://s3.amazonaws.com/podtools/tasc_t.png');
+    width:xxpx;;
+}
 
 //info modal
 .img-logo {
