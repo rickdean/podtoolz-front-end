@@ -168,6 +168,15 @@ input {
   background-color: rgba(64, 224, 208, 0.16);
 }
 
+.adder {
+  display: none;
+}
+
+.get-list {
+  display: none;
+}
+
+
 .pick {
   color: green;
   font-weight: bold;
@@ -368,6 +377,10 @@ input {
 
 .show-link {
   font-size: 25px;
+}
+
+.ava {
+  width: 200px;
 }
 
 .modal-wide .modal-dialog {

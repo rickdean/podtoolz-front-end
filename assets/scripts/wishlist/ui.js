@@ -12,6 +12,8 @@ const addItemSuccess = (data) => {
 };
 
 const addItemFail = () => {
+  // console.log('SIGN IN BOZO.');
+  // $('#error-modal').modal('show');
 };
 
 const updateItemSuccess = function(data) {
