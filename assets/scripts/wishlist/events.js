@@ -3,6 +3,7 @@
 const getFormFields = require('../../../lib/get-form-fields');
 const api = require('./api.js');
 const ui = require('./ui.js');
+
 // const saveAs = require('expose?$!file-saver');
 
 
@@ -24,6 +25,13 @@ const onShowPeripheral = function showEquipment() {
   // console.log('click peripheral button');
   document.getElementById('peripheral-template').style.display = "block";
 };
+
+const onShowItunes = function showItunes() {
+  event.preventDefault();
+  // console.log('click peripheral button');
+  document.getElementById('itunes-template').style.display = "block";
+};
+
 
 const onClose = function closeDiv() {
   event.preventDefault();
@@ -97,11 +105,11 @@ api.updateItem(data, id)
       .catch(ui.failure);
   };
 
-
 const addHandlers = () => {
   $('.view-software').on('click', onShowSoftware);
   $('.view-equipment').on('click', onShowEquipment);
   $('.view-peripheral').on('click', onShowPeripheral);
+  $('.itunes-button').on('click', onShowItunes);
   $('.get-list').on('click', onGetList);
   $('#software-template').on('submit', '.addItemButton', onAddItem);
   $('#software-template').on('click', '#closeButton', onClose);
@@ -111,6 +119,7 @@ const addHandlers = () => {
   $('#peripheral-template').on('click', '#closeButton', onClose);
   $('.comment').on('click',updateId);
   $('#addCommentModal').on('submit', onUpdateItem);
+// $(document).on('submit', '#submit-itunes', onItunes);
 };
 
 
