@@ -54,7 +54,6 @@ const signOutSuccess = () => {
     $(document).ready(function() {
     $('.adder').hide();
     $('.get-list').hide();
-    $(".listTable").html("");
 });
     $(".listTable").html("");
 };
