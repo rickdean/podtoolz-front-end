@@ -106,6 +106,7 @@ h1 {
   margin-right: auto;
   width: 400px;
 }
+
 // RESPONSIVE CSS
 @media (min-width: 768px) {
   // Navbar positioning foo
@@ -154,7 +155,7 @@ input {
 
 #software-template {
   display: none;
-  background: #dff0d8;
+  background: rgb(226, 242, 255);;
 }
 
 #equipment-template {
@@ -174,7 +175,7 @@ input {
   font-size: 15px;
   font-weight: bold;
   text-align: center;
-  color: #a52a3f;
+  color: #842737;
 }
 
 .price-font {
@@ -232,6 +233,32 @@ input {
 .divTableBody {
   display: table-row-group;
 }
+
+#hj-trans {
+  background-image: url('https://s3.amazonaws.com/podtools/hj_t.png');
+    width:xxpx;;
+}
+
+#gb-trans {
+  background-image: url('https://s3.amazonaws.com/podtools/gb_t.png');
+    width:xxpx;;
+}
+
+#aud-trans {
+  background-image: url('https://s3.amazonaws.com/podtools/aud_t.png');
+    width:xxpx;;
+}
+
+#iz-trans {
+  background-image: url('https://s3.amazonaws.com/podtools/iz_t.png');
+    width:xxpx;;
+}
+
+#scriv-trans {
+  background-image: url('https://s3.amazonaws.com/podtools/scr_t.png');
+    width:xxpx;;
+}
+
 
 
 //info modal

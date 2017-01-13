@@ -1,8 +1,9 @@
 <div class="container-fluid software-cont">
+  <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="closeButton">X</button>
   <div class="divTable">
 <div class="divTableBody">
 <div class="divTableRow">
-<div class="divTableCell">
+<div class="divTableCell" id="hj-trans">
   <form class="addItemButton">
     <div class="form-group">
       <input type="text" class="title-font" name="item[name]" value="Hindenburg Journalist" readonly>
@@ -21,13 +22,13 @@
     <button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-plus"></span>Add to List</button>
   </form>
 </div>
-<div class="divTableCell">
+<div class="divTableCell" id="gb-trans">
   <form class="addItemButton">
   <div class="form-group">
     <input type="text" class="title-font" name="item[name]" value="GarageBand" readonly>
   </div>
   <div class="form-group">
-    <input type="text" class="price-font" name="item[price]" value="Free !" readonly>
+    <input type="text" class="price-font" name="item[price]" value="FREE" readonly>
   </div>
   <div class="form-group">
     <input type="hidden" name="item[category]" value="Software" readonly>
@@ -40,7 +41,7 @@
   <button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-plus"></span>Add to List</button>
   </form>
 </div>
-<div class="divTableCell">
+<div class="divTableCell" id="aud-trans">
   <form class="addItemButton">
   <div class="form-group">
     <input type="text" class="title-font" name="item[name]" value="Audacity" readonly>
@@ -59,13 +60,13 @@
   <button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-plus"></span>Add to List</button>
   </form>
 </div>
-<div class="divTableCell">
+<div class="divTableCell" id="iz-trans">
   <form class="addItemButton">
   <div class="form-group">
     <input type="text" class="title-font" name="item[name]" value="RX5" readonly>
   </div>
   <div class="form-group">
-    <input type="text" class="price-font" name="item[price]" value="349.99" readonly>
+    <input type="text" class="price-font" name="item[price]" value="$349.99" readonly>
   </div>
   <div class="form-group">
     <input type="hidden" name="item[category]" value="Software" readonly>
@@ -80,7 +81,7 @@
 </div>
 </div>
 <div class="divTableRow">
-<div class="divTableCell">
+<div class="divTableCell" id="scriv-trans">
   <form class="addItemButton">
   <div class="form-group">
     <input type="text" class="title-font" name="item[name]" value="Scrivener" readonly>
@@ -107,8 +108,8 @@
 </div>
 <!-- DivTable.com -->
   <!-- /.row -->
-
 </div>
+
 
 <!--  Hindenburg -->
 <div class="modal fade" id="hindenburg-modal">
@@ -130,7 +131,7 @@
               </div>
               <div class="vis pos-4 size-4 cont">
                 <div class="cont">
-                  <p class="link-font"><a href="http://hindenburg.com">http://hindenburg.com</a></p>
+                  <p class="link-font"><a target="_blank" href="http://hindenburg.com">http://hindenburg.com</a></p>
                 </div>
               </div>
               <div class="vis pos-5 size-5 cont">
@@ -192,7 +193,7 @@
               </div>
               <div class="vis pos-4 size-4 cont">
                 <div class="cont">
-                  <p class="link-font"><a href="http://www.apple.com/mac/garageband/">http://www.apple.com/mac/garageband/</a></p>
+                  <p class="link-font"><a target="_blank" href="http://www.apple.com/mac/garageband/">http://www.apple.com/mac/garageband/</a></p>
                 </div>
               </div>
               <div class="vis pos-5 size-5 cont">
@@ -246,7 +247,7 @@
               </div>
               <div class="vis pos-4 size-4 cont">
                 <div class="cont">
-                  <p class="link-font"><a href="http://www.audacityteam.org/">http://www.audacityteam.org/</a></p>
+                  <p class="link-font"><a target="_blank" href="http://www.audacityteam.org/">http://www.audacityteam.org/</a></p>
                 </div>
               </div>
               <div class="vis pos-5 size-5 cont">
@@ -298,7 +299,7 @@
               </div>
               <div class="vis pos-4 size-4 cont">
                 <div class="cont">
-                  <p class="link-font"><a href="https://www.izotope.com/en/products/repair-and-edit/rx.html">https://www.izotope.com/en/products/repair-and-edit/rx.html</a></p>
+                  <p class="link-font"><a target="_blank" href="https://www.izotope.com/en/products/repair-and-edit/rx.html">https://www.izotope.com/en/products/repair-and-edit/rx.html</a></p>
                 </div>
               </div>
               <div class="vis pos-5 size-5 cont">
@@ -361,7 +362,7 @@
               </div>
               <div class="vis pos-4 size-4 cont">
                 <div class="cont">
-                  <p class="link-font"><a href="https://www.literatureandlatte.com/scrivener.php">https://www.literatureandlatte.com/scrivener.php</a></p>
+                  <p class="link-font"><a target="_blank" href="https://www.literatureandlatte.com/scrivener.php">https://www.literatureandlatte.com/scrivener.php</a></p>
                 </div>
               </div>
               <div class="vis pos-5 size-5 cont">
