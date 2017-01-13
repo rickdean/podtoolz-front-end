@@ -50,12 +50,13 @@ const signOutSuccess = () => {
     $('#addBox').hide();
     $(".bigMessage").hide();
     clear('#signOut');
-    $(".modal").on("hidden.bs.modal", function(){
+    // $(".modal").on("hidden.bs.modal", function(){
+    $(document).ready(function() {
     $('.adder').hide();
     $('.get-list').hide();
-
     $(".listTable").html("");
 });
+    $(".listTable").html("");
 };
 
 const passSuccess = (data) => {
