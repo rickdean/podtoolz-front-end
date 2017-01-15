@@ -65,6 +65,8 @@ api.updateItem(data, id)
   .fail(ui.failure);
 };
 
+
+
   const onDeleteItem = function(){
     let id = event.target.getAttribute('data-id');
     // console.log('DELETED', id);
