@@ -584,17 +584,15 @@ webpackJsonp([0],[
 	    + alias4(((helper = (helper = helpers.comment || (depth0 != null ? depth0.comment : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"comment","hash":{},"data":data}) : helper)))
 	    + "<button data-id="
 	    + alias4(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"id","hash":{},"data":data}) : helper)))
-	    + " class=\"btn btn-link comment\" data-toggle=\"modal\"\n              data-target=\"#addCommentModal\">Add Comment</button></td>\n          </tr>\n      </tbody>\n  </table>\n  <button type=\"button\" data-id="
+	    + " class=\"btn btn-link comment\" data-toggle=\"modal\"\n              data-target=\"#addCommentModal\">Add Comment</button></td>\n          </tr>\n          <tr>\n            <td><button type=\"button\" data-id="
 	    + alias4(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"id","hash":{},"data":data}) : helper)))
-	    + " class=\"btn btn-danger btn-sm delete-list-item\">Delete</button>\n";
+	    + " class=\"btn btn-danger btn-sm delete-list-item\"><span class=\"glyphicon glyphicon-trash\"></span></button>\n            </td>\n          </tr>\n      </tbody>\n  </table>\n\n\n";
 	},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-	    var stack1, helper, alias1=depth0 != null ? depth0 : {};
+	    var stack1;
 
 	  return "<h2> Wishlist </h2>\n\n"
-	    + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.items : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 1),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-	    + "\n<a href=\"http://www.evernote.com/clip.action?url="
-	    + container.escapeExpression(((helper = (helper = helpers["your-site-url"] || (depth0 != null ? depth0["your-site-url"] : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(alias1,{"name":"your-site-url","hash":{},"data":data}) : helper)))
-	    + "\" target=\"_blank\" title=\"Clip to Evernote\" onclick=\"window.open('http://www.evernote.com/clip.action?url=' + encodeURIComponent(document.URL) + '&amp;t=' +  encodeURIComponent(document.title)); return false;\">\n<img src=\"https://s3.amazonaws.com/podtools/evernote-button.png\">\n</a>\n\n<br>\n<br>\n<div class=\"modal-footer\">\n  <button type=\"button\" class=\"btn btn-default reset\" data-dismiss=\"modal\">Close</button>\n  <p>&copy; 2017 Rick Coste Productions, Inc. </p>\n</div>\n";
+	    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.items : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 1),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+	    + "\n\n<br>\n<br>\n<div class=\"modal-footer\">\n  <button type=\"button\" class=\"btn btn-default reset\" data-dismiss=\"modal\">Close</button>\n  <p>&copy; 2017 Rick Coste Productions, Inc. </p>\n</div>\n";
 	},"useData":true});
 
 /***/ },
