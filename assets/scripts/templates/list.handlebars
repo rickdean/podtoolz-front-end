@@ -27,14 +27,16 @@
             <td class='row'>{{comment}}<button data-id={{id}} class="btn btn-link comment" data-toggle="modal"
               data-target="#addCommentModal">Add Comment</button></td>
           </tr>
+          <tr>
+            <td><button type="button" data-id={{id}} class="btn btn-danger btn-sm delete-list-item"><span class="glyphicon glyphicon-trash"></span></button>
+            </td>
+          </tr>
       </tbody>
   </table>
-  <button type="button" data-id={{id}} class="btn btn-danger btn-sm delete-list-item">Delete</button>
+
+
 {{/each}}
 
-<a href="http://www.evernote.com/clip.action?url={{your-site-url}}" target="_blank" title="Clip to Evernote" onclick="window.open('http://www.evernote.com/clip.action?url=' + encodeURIComponent(document.URL) + '&amp;t=' +  encodeURIComponent(document.title)); return false;">
-<img src="https://s3.amazonaws.com/podtools/evernote-button.png">
-</a>
 
 <br>
 <br>
