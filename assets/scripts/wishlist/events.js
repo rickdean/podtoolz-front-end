@@ -46,26 +46,13 @@ const onAddItem = function (event) {
     .catch(ui.addItemFail);
   };
 
-
-  const updateId =  function (event){
-event.preventDefault();
-let id = $(event.target).attr("data-id");
-$(".comment").attr("data-id", id);
-};
-
-const onUpdateItem = function (event) {
-event.preventDefault();
-let id = $(".comment").attr("data-id");
-let data = getFormFields(event.target);
-api.updateItem(data, id)
-  .done( function(){
-    ui.updateItemSuccess();
-    onGetList(event);
-  })
-  .fail(ui.failure);
-};
-
-
+  const onGetList = function () {
+    //event.preventDefault();
+    // console.log('click get list button');
+    api.getList()
+      .then(ui.getListSuccess)
+      .catch(ui.failure);
+  };
 
   const onDeleteItem = function(){
     let id = event.target.getAttribute('data-id');
@@ -78,19 +65,22 @@ api.updateItem(data, id)
       .catch(ui.deleteItemFailure);
   };
 
-  const onGetList = function (event) {
-    //event.preventDefault();
-    // console.log('click get list button');
-    api.getList()
-      .then(ui.getListSuccess)
-      .then(function(){
-        $('.delete-list-item').on('click', onDeleteItem);
-      })
-      .then(function() {
-        $('.update').on('click', onUpdateItem);
-      })
-      .catch(ui.failure);
-  };
+
+  // const onUpdateItem = function(event){
+  //   event.preventDefault();
+  //   let itemId = event.target.getAttribute('data-id');
+  //   let data = getFormFields(this);
+  //   // let data = {item: {count: 4}};
+  //   // console.log('I\'m UPDATED itemId and countData', itemId, data);
+  //   api.updateItem(itemId, data)
+  //   .then(ui.updateItemSuccess)
+  //   .then(function(){
+  //     onGetItems();
+  //   })
+  //   .catch(ui.updateItemFailure);
+  // };
+
+
 
 const addHandlers = () => {
   $('.view-software').on('click', onShowSoftware);
@@ -104,9 +94,9 @@ const addHandlers = () => {
   $('#equipment-template').on('click', '#closeButton', onClose);
   $('#peripheral-template').on('submit', '.addItemButton', onAddItem);
   $('#peripheral-template').on('click', '#closeButton', onClose);
-  $('.comment').on('click',updateId);
-  $('#addCommentModal').on('submit', onUpdateItem);
-// $(document).on('submit', '#submit-itunes', onItunes);
+  // $('.comment').on('click',updateId);
+  // $('#addCommentModal').on('submit', onUpdateItem);
+  $(document).on('click', '.delete-list-item', onDeleteItem);
 };
 
 

@@ -1,4 +1,18 @@
 'use strict';
+
+const clear = (modal) => {
+    setTimeout(function() {
+        $(modal).modal('hide');
+    }, 1500);
+    $(modal).on('hidden.bs.modal', function() {
+        $(this).find("input,textarea,select").val('').end();
+        $('.modal-success').text('');
+    });
+};
+
+const clearForm = (selector) => {
+    $(selector).find("input,textarea,select").val('').end();
+};
 // const store = require('../store');
 const wishListTemplate = require('../templates/list.handlebars');
 
@@ -9,6 +23,8 @@ const getListSuccess = (items) => {
 
 const addItemSuccess = (data) => {
   console.log('did it work?', data);
+  $('.add-success').show();
+  $('.add-success').hide(4000);
 };
 
 const addItemFail = () => {
@@ -18,6 +34,7 @@ const addItemFail = () => {
 
 const updateItemSuccess = function(data) {
   console.log('Item  updated successfully.', data);
+  clear('#addCommentModal');
 };
 
 const updateItemFailure = function(error) {
