@@ -10,9 +10,9 @@ const clear = (modal) => {
     });
 };
 
-const clearForm = (selector) => {
-    $(selector).find("input,textarea,select").val('').end();
-};
+// const clearForm = (selector) => {
+//     $(selector).find("input,textarea,select").val('').end();
+// };
 // const store = require('../store');
 const wishListTemplate = require('../templates/list.handlebars');
 
@@ -24,7 +24,7 @@ const getListSuccess = (items) => {
 const addItemSuccess = (data) => {
   console.log('did it work?', data);
   $('.add-success').show();
-  $('.add-success').hide(4000);
+  $('.add-success').hide(3700);
 };
 
 const addItemFail = () => {
@@ -41,8 +41,8 @@ const updateItemFailure = function(error) {
   console.log('No update', error);
 };
 
-const deleteItemSuccess = function(data) {
-  console.log('deleted', data);
+const deleteItemSuccess = function() {
+  // console.log('deleted', data);
 };
 
 const deleteItemFailure = function(error) {
