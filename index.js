@@ -16,6 +16,3 @@ require('expose?jQuery!jquery');
 
 // attach getFormFields
 require('expose?getFormFields!./lib/get-form-fields.js');
-
-// save form as text file
-require('expose?$!file-saver');

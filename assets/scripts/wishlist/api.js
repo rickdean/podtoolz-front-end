@@ -5,18 +5,17 @@ const store = require('../store.js');
 
 
 const addItem = (data) =>
-  //let token = app.user.token;
   $.ajax({
     url: app.host + '/items',
     method: 'POST',
     data,
-  headers: {
-    Authorization: 'Token token=' + store.user.token,
+    headers: {
+      Authorization: 'Token token=' + store.user.token,
     },
   });
 
-  const getList = () => {
-   return $.ajax({
+const getList = () => {
+  return $.ajax({
     url: app.host + '/items',
     method: 'GET',
     headers: {
@@ -26,25 +25,25 @@ const addItem = (data) =>
 };
 
 const deleteItem = (id) =>
-    $.ajax ({
+  $.ajax({
     url: app.host + '/items/' + id,
     method: 'DELETE',
     headers: {
-    Authorization: 'Token token=' + store.user.token,
+      Authorization: 'Token token=' + store.user.token,
     }
   });
 
 
 const updateItem = (data, id) => {
-      return $.ajax ({
-      url: app.host + '/items/' + id,
-      method: 'PATCH',
-      headers: {
-        Authorization: 'Token token=' + store.user.token,
-      },
-      data,
-    });
-  };
+  return $.ajax({
+    url: app.host + '/items/' + id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token,
+    },
+    data,
+  });
+};
 
 
 module.exports = {
