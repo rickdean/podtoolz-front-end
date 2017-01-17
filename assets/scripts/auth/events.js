@@ -1,13 +1,11 @@
 'use strict';
-/*jslint node: true */
-/*jshint esversion: 6 */
 
 const getFormFields = require(`../../../lib/get-form-fields`);
 const api = require('./api.js');
 const ui = require('./ui.js');
 
 
-const onSignUp = function (event) {
+const onSignUp = function(event) {
   let data = getFormFields(this);
   event.preventDefault();
   api.signUp(data)
@@ -15,7 +13,7 @@ const onSignUp = function (event) {
     .catch(ui.failure);
 };
 
-const onSignIn = function (event) {
+const onSignIn = function(event) {
   let data = getFormFields(this);
   event.preventDefault();
   api.signIn(data)
@@ -23,7 +21,7 @@ const onSignIn = function (event) {
     .catch(ui.failure);
 };
 
-const onChangePassword = function (event) {
+const onChangePassword = function(event) {
   let data = getFormFields(this);
   event.preventDefault();
   api.changePassword(data)
@@ -31,7 +29,7 @@ const onChangePassword = function (event) {
     .catch(ui.failure);
 };
 
-const onSignOut = function (event) {
+const onSignOut = function(event) {
   event.preventDefault();
   api.signOut()
     .then(ui.signOutSuccess)

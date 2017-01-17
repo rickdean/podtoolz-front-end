@@ -1,37 +1,35 @@
 <h2> Wishlist </h2>
 
 {{#each items as |item|}}
-  <table class="table table-reflow listTable" data-id={{id}}>
-      <tbody>
-          <tr>
-            <th>Category</th>
-              <td class='row'>{{category}}</td>
-          </tr>
-          <tr>
-            <th>Name</th>
-              <td class='row'>{{name}}</td>
-              </tr>
-          <tr>
-            <th>Price</th>
-              <td class='row'>{{price}}</td>
-              </tr>
-          <tr>
-            <th>Url</th>
-              <td class='row'>{{url}}</td>
-              </tr>
+  <table class="table table-reflow listTable" data-id= {{id}}>
+    <tbody>
+      <tr>
+        <th>Category</th>
+        <td class='row'>{{category}}</td>
+      </tr>
+      <tr>
+        <th>Name</th>
+        <td class='row'>{{name}}</td>
+      </tr>
+      <tr>
+        <th>Price</th>
+        <td class='row'>{{price}}</td>
+      </tr>
+      <tr>
+        <th>Url</th>
+        <td class='row'>{{url}}</td>
+      </tr>
 
-              <!-- add comments -->
-          <tr>
-            <th>Comments</th>
-            <td class='row'>{{comment}}<button data-id={{id}} class="btn btn-link comment" data-toggle="modal"
-             data-target="#addCommentModal">Add Comment</button></td>
-          </tr>
-          <tr>
-            <td class='row'><button data-id={{id}} class="btn btn-danger btn-link delete" data-toggle="modal"
-              data-target="#confirmDeleteModal">Delete</button>
-            </td>
-          </tr>
-      </tbody>
+      <!-- add comments -->
+      <tr>
+        <th>Comments</th>
+        <td class='row'>{{comment}}<button data-id= {{id}} class="btn btn-link comment" data-toggle="modal" data-target="#addCommentModal">Add Comment</button></td>
+      </tr>
+      <tr>
+        <td class='row'><button data-id= {{id}} class="btn btn-danger btn-link delete" data-toggle="modal" data-target="#confirmDeleteModal">Delete</button>
+        </td>
+      </tr>
+    </tbody>
   </table>
 
 

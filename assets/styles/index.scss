@@ -18,29 +18,29 @@ h1 {
 // Special class on .container surrounding .navbar, used for positioning it into place.
 
 .navbar-wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
   left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
   z-index: 20;
 }
 // Flip around the padding for proper display in narrow viewports
 
 .navbar-wrapper > .container {
-  padding-right: 0;
   padding-left: 0;
+  padding-right: 0;
 }
 
 .navbar-wrapper .navbar {
-  padding-right: 15px;
   padding-left: 15px;
+  padding-right: 15px;
 }
 
 .navbar-wrapper .navbar .container {
   width: auto;
 }
 // CUSTOMIZE THE CAROUSEL
-/* Carousel base class */
+// Carousel base class
 .carousel {
   height: 500px;
   margin-bottom: 60px;
@@ -53,16 +53,16 @@ h1 {
 //Declare heights because of positioning of img element
 
 .carousel .item {
-  height: 500px;
   background-color: #777;
+  height: 500px;
 }
 
 .carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
+  height: 500px;
   left: 0;
   min-width: 100%;
-  height: 500px;
+  position: absolute;
+  top: 0;
 }
 //MARKETING CONTENT
 // Center align the text within the three columns below the carousel
@@ -77,27 +77,27 @@ h1 {
 }
 
 .marketing .col-lg-4 p {
-  margin-right: 10px;
   margin-left: 10px;
+  margin-right: 10px;
 }
 
 .centered {
+  background-color: #E0E0E0;
   margin: 0 auto;
   padding: 20px;
-  background-color: #E0E0E0;
 }
 // Featurettes
 
 .featurette-divider {
   margin: 80px 0;
-  /* Space out the Bootstrap <hr> more */
+// Space out the Bootstrap <hr> more
 }
 // Thin out the marketing headings
 
 .featurette-heading {
   font-weight: 300;
-  line-height: 1;
   letter-spacing: -1px;
+  line-height: 1;
 }
 
 .center-block {
@@ -106,7 +106,6 @@ h1 {
   margin-right: auto;
   width: 400px;
 }
-
 // RESPONSIVE CSS
 @media (min-width: 768px) {
   // Navbar positioning foo
@@ -115,13 +114,13 @@ h1 {
   }
 
   .navbar-wrapper .container {
-    padding-right: 15px;
     padding-left: 15px;
+    padding-right: 15px;
   }
 
   .navbar-wrapper .navbar {
-    padding-right: 0;
     padding-left: 0;
+    padding-right: 0;
   }
   // The navbar becomes detached from the top, so we round the corners
   .navbar-wrapper .navbar {
@@ -129,15 +128,16 @@ h1 {
   }
   // Bump up size of carousel content
   .carousel-caption p {
-    margin-bottom: 20px;
     font-size: 21px;
     line-height: 1.4;
+    margin-bottom: 20px;
   }
 
   .featurette-heading {
     font-size: 50px;
   }
 }
+
 @media (min-width: 992px) {
   .featurette-heading {
     margin-top: 120px;
@@ -154,18 +154,18 @@ input {
 }
 
 #software-template {
+  background: rgb(226, 242, 255);
   display: none;
-  background: rgb(226, 242, 255);;
 }
 
 #equipment-template {
-  display: none;
   background-color: rgba(255, 235, 205, 0.41);
+  display: none;
 }
 
 #peripheral-template {
-  display: none;
   background-color: rgba(64, 224, 208, 0.16);
+  display: none;
 }
 
 .adder {
@@ -180,17 +180,16 @@ input {
   display: none;
 }
 
-
 .pick {
   color: green;
   font-weight: bold;
 }
 
 .title-font {
+  color: #842737;
   font-size: 15px;
   font-weight: bold;
   text-align: center;
-  color: #842737;
 }
 
 .price-font {
@@ -211,7 +210,8 @@ input {
   color: blue;
   opacity: 1;
 }
-/* DivTable.com */
+
+// DivTable.com
 .divTable {
   display: table;
   width: 100%;
@@ -228,7 +228,7 @@ input {
 
 .divTableCell,
 .divTableHead {
-  border: 0px solid #999999;
+  border: 0 solid #999999;
   display: table-cell;
   padding: 20px 10px;
 }
@@ -251,74 +251,73 @@ input {
 
 #hj-trans {
   background-image: url('https://s3.amazonaws.com/podtools/hj_t.png');
-    width:xxpx;;
+  width: xxpx;
 }
 
 #gb-trans {
   background-image: url('https://s3.amazonaws.com/podtools/gb_t.png');
-    width:xxpx;;
+  width: xxpx;
 }
 
 #aud-trans {
   background-image: url('https://s3.amazonaws.com/podtools/aud_t.png');
-    width:xxpx;;
+  width: xxpx;
 }
 
 #iz-trans {
   background-image: url('https://s3.amazonaws.com/podtools/iz_t.png');
-    width:xxpx;;
+  width: xxpx;
 }
 
 #scriv-trans {
   background-image: url('https://s3.amazonaws.com/podtools/scr_t.png');
-    width:xxpx;;
+  width: xxpx;
 }
 
 #mxl-trans {
   background-image: url('https://s3.amazonaws.com/podtools/mxl_t.png');
-    width:xxpx;;
+  width: xxpx;
 }
 
 #shure-trans {
   background-image: url('https://s3.amazonaws.com/podtools/sm57_t.png');
-    width:xxpx;;
+  width: xxpx;
 }
 
 #mixer-trans {
   background-image: url('https://s3.amazonaws.com/podtools/sm57_t.png');
-    width:xxpx;;
+  width: xxpx;
 }
 
 #mdx-trans {
   background-image: url('https://s3.amazonaws.com/podtools/mdx_t.png');
-    width:xxpx;;
+  width: xxpx;
 }
 
 #tascam-trans {
   background-image: url('https://s3.amazonaws.com/podtools/tasc_t.png');
-    width:xxpx;;
+  width: xxpx;
 }
 
 #stand-trans {
   background-image: url('https://s3.amazonaws.com/podtools/stand_t.png');
-    width:xxpx;;
+  width: xxpx;
 }
 
 #filter-trans {
   background-image: url('https://s3.amazonaws.com/podtools/filter_t.png');
-    width:xxpx;;
+  width: xxpx;
 }
 
 #ipad-trans {
   background-image: url('https://s3.amazonaws.com/podtools/ipad_t.png');
-    width:xxpx;;
+  width: xxpx;
 }
 
 #cables-trans {
   background-image: url('https://s3.amazonaws.com/podtools/cable_t.png');
-    width:xxpx;;
+  width: xxpx;
 }
-
 //info modal
 .img-logo {
   width: 250px;
@@ -344,12 +343,13 @@ input {
 }
 
 .listTable {
-  table-layout:fixed;
-  width:450px;
+  table-layout: fixed;
+  width: 450px;
 }
+
 .listTable td {
-  width:350px;
-  word-wrap:break-word;
+  width: 350px;
+  word-wrap: break-word;
 }
 
 .modal-title {
@@ -357,29 +357,29 @@ input {
 }
 
 .paper {
-  position: relative;
-  width: 90%;
-  max-width: 800px;
-  min-width: 400px;
-  height: 390;
-  margin: 0 auto;
   background: #fafafa;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,.3);
+  height: 390;
+  margin: 0 auto;
+  max-width: 800px;
+  min-width: 400px;
   overflow: hidden;
+  position: relative;
+  width: 90%;
 }
 
 .paper:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 60px;
   background: radial-gradient(#575450 6px, transparent 7px) repeat-y;
   background-size: 30px 30px;
   border-right: 3px solid #D44147;
+  bottom: 0;
   box-sizing: border-box;
+  content: '';
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 60px;
 }
 //
 // .paper-content {
@@ -418,7 +418,6 @@ input {
 
 .modal-wide .modal-dialog {
   width: 55%;
-  /* or whatever you wish */
 }
 
 .version {
