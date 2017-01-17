@@ -43,6 +43,7 @@ const updateItemFailure = function(error) {
 
 const deleteItemSuccess = function() {
   // console.log('deleted', data);
+  clear('#confirmDeleteModal');
 };
 
 const deleteItemFailure = function(error) {

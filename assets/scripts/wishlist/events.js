@@ -54,8 +54,15 @@ const onAddItem = function (event) {
       .catch(ui.failure);
   };
 
+  const deleteId =  function (event){
+ event.preventDefault();
+ let id = $(event.target).attr("data-id");
+ $(".delete").attr("data-id", id);
+ };
+
   const onDeleteItem = function(){
-    let id = $(event.target).attr("data-id");
+    event.preventDefault();
+    let id = $(".delete").attr("data-id");
     console.log('DELETED', id);
     api.deleteItem(id)
       .then(ui.deleteItemSuccess)
@@ -98,7 +105,9 @@ const addHandlers = () => {
   $('#equipment-template').on('click', '#closeButton', onClose);
   $('#peripheral-template').on('submit', '.addItemButton', onAddItem);
   $('#peripheral-template').on('click', '#closeButton', onClose);
-  $(document).on('click', '.delete-list-item', onDeleteItem);
+  $(document).on('click', '.delete', deleteId);
+  $('#confirmDeleteModal').on('click', onDeleteItem);
+  // $(document).on('click', '.delete-list-item', onDeleteItem);
   $(document).on('click', '.comment', updateId);
   $('#addCommentModal').on('submit', onUpdateItem);
 
