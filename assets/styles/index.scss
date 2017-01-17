@@ -340,7 +340,16 @@ input {
 // wishlist modal
 
 .list-display {
-  margin-left: 50px;
+  margin-left: 150px;
+}
+
+.listTable {
+  table-layout:fixed;
+  width:450px;
+}
+.listTable td {
+  width:350px;
+  word-wrap:break-word;
 }
 
 .modal-title {
