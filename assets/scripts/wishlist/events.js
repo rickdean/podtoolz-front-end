@@ -55,8 +55,8 @@ const onAddItem = function (event) {
   };
 
   const onDeleteItem = function(){
-    let id = event.target.getAttribute('data-id');
-    // console.log('DELETED', id);
+    let id = $(event.target).attr("data-id");
+    console.log('DELETED', id);
     api.deleteItem(id)
       .then(ui.deleteItemSuccess)
       .then(function(){
@@ -66,19 +66,23 @@ const onAddItem = function (event) {
   };
 
 
-  // const onUpdateItem = function(event){
-  //   event.preventDefault();
-  //   let itemId = event.target.getAttribute('data-id');
-  //   let data = getFormFields(this);
-  //   // let data = {item: {count: 4}};
-  //   // console.log('I\'m UPDATED itemId and countData', itemId, data);
-  //   api.updateItem(itemId, data)
-  //   .then(ui.updateItemSuccess)
-  //   .then(function(){
-  //     onGetItems();
-  //   })
-  //   .catch(ui.updateItemFailure);
-  // };
+    const updateId =  function (event){
+   event.preventDefault();
+   let id = $(event.target).attr("data-id");
+   $(".comment").attr("data-id", id);
+   };
+
+   const onUpdateItem = function (event) {
+   event.preventDefault();
+   let id = $(".comment").attr("data-id");
+   let data = getFormFields(event.target);
+   api.updateItem(data, id)
+     .then(ui.updateItemSuccess)
+     .then( function(){
+       onGetList();
+     })
+     .catch(ui.failure);
+   };
 
 
 
@@ -94,9 +98,10 @@ const addHandlers = () => {
   $('#equipment-template').on('click', '#closeButton', onClose);
   $('#peripheral-template').on('submit', '.addItemButton', onAddItem);
   $('#peripheral-template').on('click', '#closeButton', onClose);
-  // $('.comment').on('click',updateId);
-  // $('#addCommentModal').on('submit', onUpdateItem);
   $(document).on('click', '.delete-list-item', onDeleteItem);
+  $(document).on('click', '.comment', updateId);
+  $('#addCommentModal').on('submit', onUpdateItem);
+
 };
 
 
