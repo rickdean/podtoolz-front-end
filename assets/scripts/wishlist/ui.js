@@ -3,7 +3,7 @@
 const clear = (modal) => {
     setTimeout(function() {
         $(modal).modal('hide');
-    }, 1500);
+    }, 800);
     $(modal).on('hidden.bs.modal', function() {
         $(this).find("input,textarea,select").val('').end();
         $('.modal-success').text('');
@@ -24,7 +24,7 @@ const getListSuccess = (items) => {
 const addItemSuccess = (data) => {
   console.log('did it work?', data);
   $('.add-success').show();
-  $('.add-success').hide(3700);
+  // $('.add-success').hide(2000);
 };
 
 const addItemFail = () => {

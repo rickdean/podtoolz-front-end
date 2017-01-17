@@ -7,7 +7,7 @@ const store = require('../store');
 const clear = (modal) => {
     setTimeout(function() {
         $(modal).modal('hide');
-    }, 1500);
+    }, 1000);
     $(modal).on('hidden.bs.modal', function() {
         $(this).find("input,textarea,select").val('').end();
         $('.modal-success').text('');

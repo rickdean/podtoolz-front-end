@@ -91,6 +91,15 @@ const onAddItem = function (event) {
      .catch(ui.failure);
    };
 
+   const onCloseSuccess = function closeSuccess() {
+     event.preventDefault();
+     $('.add-success').hide();
+     // console.log('close button');
+    //  document.getElementById('software-template').style.display = "none";
+    //  document.getElementById('equipment-template').style.display = "none";
+    //  document.getElementById('peripheral-template').style.display = "none";
+   };
+
 
 
 const addHandlers = () => {
@@ -110,6 +119,7 @@ const addHandlers = () => {
   // $(document).on('click', '.delete-list-item', onDeleteItem);
   $(document).on('click', '.comment', updateId);
   $('#addCommentModal').on('submit', onUpdateItem);
+  $('.close-success').on('click', onCloseSuccess);
 
 };
 
