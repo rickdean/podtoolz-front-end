@@ -55,7 +55,7 @@ const onAddItem = function (event) {
   };
 
   const onDeleteItem = function(){
-    let id = event.target.getAttribute('data-id');
+    let id = $(event.target).attr("data-id");
     console.log('DELETED', id);
     api.deleteItem(id)
       .then(ui.deleteItemSuccess)
