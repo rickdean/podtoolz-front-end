@@ -23,6 +23,7 @@ Podtoolz was built using the [Boostrap](http://getbootstrap.com/) framework with
 - [Front End Wireframe ('below the fold')](https://s3.amazonaws.com/podtools/front_page_lower.png)
 - [Item Descriptions Wireframe (Modal)](https://s3.amazonaws.com/podtools/item_modal.png
 )
+- [Pitch Deck](https://s3.amazonaws.com/podtools/podtoolz_deck.pdf)
 
 ## User Stories
 - As a user I want to be able to view software recommendations.
@@ -49,6 +50,10 @@ Another added feature provides the user with the ability to sample one of the au
 
 ## Next Steps
 - Allow users to send a list via email or share via social media (without copying and pasting from the front end or a web-clipping service like Evernote)
+
+## Dependencies
+- Install build dependencies with npm install and bundle install.
+  - Bootstrap
 
 
 ## [License](LICENSE)
