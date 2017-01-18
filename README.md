@@ -12,7 +12,7 @@ What tools do you need to start a podcast?  It all starts with a great idea!
 ![Screenshot of Podtoolz](https://s3.amazonaws.com/podtools/podtoolz_grab.jpeg)
 
 ## About Podtoolz
-Podtoolz allows users interested in podcasting to see the software and equipment I use on a day to day basis (along with some recommendations).  A common question I received is "what do I need to get started" and Podtoolz is the answer. Users can create a 'wishlist' of the items they want and share them with friends and family - or go on a shopping spree!
+Podtoolz allows users interested in podcasting to see the software and equipment I use on a day to day basis (along with some recommendations).  A common question I receive is "what do I need to get started" and Podtoolz is the answer. Users can create a 'wishlist' of the items they want and share them with friends and family - or go on a shopping spree!
 
 Podtoolz was built using the [Boostrap](http://getbootstrap.com/) framework with a lot of help from [Handelbars](http://handlebarsjs.com/).  The app employs a Rails API to manage user authentication and the 'wishlist' data. All site images are presented via the [Amazon S3 Web Service](https://aws.amazon.com/s3/).
 
